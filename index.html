@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtBoi</title>
+    <script src="ArtBoi.js"></script>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+    let canvas = new ArtBoi.Canvas(document.getElementById("myCanvas"));
+    let circle = new ArtBoi.Circle(50);
+    canvas.add(circle);
+    canvas.render();
+    setInterval(function() {
+        circle.x += 1;
+        circle.y += 1;
+        canvas.render();
+    }, 30);
+</script>
+</body>
+</html>
